@@ -11,7 +11,7 @@ class CreateCommentsTable extends Migration
         Schema::create('clake_userextended_comments', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('user_id');
+            $table->integer('user_id')->nullable();
             $table->text('content');
             $table->softDeletes();
             $table->timestamps();
